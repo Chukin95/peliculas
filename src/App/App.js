@@ -1,8 +1,8 @@
-import './App.css';
-import LoginForm from './LoginForm';
-import peliculas from './MOVIES_DATA.json';
-import MovieList from './MovieList';
-import SearchForm from './SearchForm';
+import LoginForm from '../components/LoginForm/LoginForm';
+import MovieList from '../components/MovieList/MovieList';
+import SearchForm from '../components/SearchForm/SearchForm';
+import peliculas from '../json/MOVIES_DATA.json';
+import '../styles/App.css';
 
 function App() {
   return (
