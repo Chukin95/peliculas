@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function SearchForm() {
 
-  const [searchValue, setSearchValue] = useState('Ingresar su busqueda...');
+  const [searchValue, setSearchValue] = useState('');
 
   return (
     <div>
