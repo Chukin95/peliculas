@@ -17,7 +17,7 @@ function MovieCard({poster, title, releaseDate, duration, maturity, genres, dire
           }).call(this)
         }
       <div className="p-4">
-        <h2 className="mb-3 text-3xl text-blue-500 font-semibold">{title}</h2>
+        <h2 className="mb-3 text-3xl text-blue-600 font-semibold">{title}</h2>
         <hr/>
         <p><b>Año de lanzamiento:</b> {releaseDate} | {duration}</p>
         <p><b>Duración:</b> 90 minutos</p>
@@ -26,7 +26,7 @@ function MovieCard({poster, title, releaseDate, duration, maturity, genres, dire
         <p><b>Director:</b> {director}</p>
         <p><b>Actores Principales:</b> {mainActors.join(', ')}</p>
         <p><b>Trama:</b> {plot}</p>
-        <p><b>Calificación:</b> {rating}⭐</p>
+        <p><b>Calificación:</b> {rating}/10⭐</p>
       </div>
     </div>
   );
