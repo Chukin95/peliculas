@@ -2,7 +2,7 @@ import React from 'react';
 
 function MovieCard({poster, title, releaseDate, duration, maturity, genres, director, mainActors, plot, metascore, rating}) {
   return (
-    <div className="mx-auto max-w-md text-white bg-gray-400 shadow-lg rounded-lg overflow-hidden">
+    <div className="card mx-auto max-w-md text-white bg-gray-400 shadow-lg rounded-lg overflow-hidden">
       <img src={poster} alt={title} className="w-full h-80" />
       {(function(){
               if (metascore > 80) {

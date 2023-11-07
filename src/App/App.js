@@ -3,6 +3,7 @@ import MovieList from '../components/MovieList/MovieList';
 import SearchForm from '../components/SearchForm/SearchForm';
 import peliculas from '../json/MOVIES_DATA.json';
 import '../styles/App.css';
+import '../styles/MovieCard.css';
 
 function App() {
   return (
