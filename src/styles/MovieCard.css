@@ -1,3 +1,9 @@
+.metascore {
+  position: relative;
+  left: 0px;
+  top: -48px;
+}
+
 .card {
   border: 1px solid #1f1f1f;
   transition: transform 0.3s;

@@ -1,4 +1,4 @@
-import MoviesListFromAPI from '../Movie';
+import MoviesListFromAPI from '../components/MoviesAPI/Movie';
 import LoginForm from '../components/LoginForm/LoginForm';
 import MoviesListFromJSON from '../components/MovieList/MovieList';
 import SearchFromAPI from '../components/SearchForm/SearchForm';

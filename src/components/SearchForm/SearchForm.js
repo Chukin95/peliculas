@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from "react";
+import '../../styles/Search.css';
 import SearchList from './SearchList';
 
 function SearchForm() {
@@ -28,13 +29,26 @@ function SearchForm() {
   return (
     <div>
         <div className="relative flex flex-column flex-wrap content-center justify-center items-center">
-            <input type="search"
+            {/* <input type="search"
             id="default-search"
             value={searchValue}
             onChange={(event) => {setSearchValue(event.target.value)}}
             className="block w-96 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Buscar películas..."
-            />
+            /> */}
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"/>
+
+            <div className="search-bar">
+              <input
+              id="default-search"
+              value={searchValue}
+              onChange={(event) => {setSearchValue(event.target.value)}}
+              className="w-96"
+              pattern=".*\S.*"
+              required/>
+              <button className="search-btn" type="submit">
+              </button>
+            </div>
         </div>
         <SearchList searchMovies={searchMovies}/>
     </div>
