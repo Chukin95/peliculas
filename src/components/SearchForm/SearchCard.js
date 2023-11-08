@@ -10,13 +10,13 @@ const Card = ({ movie }) => {
       <img src={`${posterBaseUrl}${posterSize}${movie.poster_path}`} alt={movie.title} className="w-full h-80" />
       {(function(){
               if (movie.vote_average > 7.9) {
-                return (<button className='metascore bg-green-600 text-white font-bold py-1 px-4 rounded w-30'><b>Rating:</b> {movie.vote_average}/10⭐</button>);
+                return <button className='metascore bg-green-600 text-white font-bold py-1 px-4 rounded w-30'><b>Rating:</b> {movie.vote_average.toFixed(1)}/10⭐</button>;
               } else if (movie.vote_average > 5.9) {
-                return <button className='metascore bg-yellow-400 text-white font-bold py-1 px-4 rounded w-30'><b>Rating:</b> {movie.vote_average}/10⭐</button>;
+                return <button className='metascore bg-yellow-400 text-white font-bold py-1 px-4 rounded w-30'><b>Rating:</b> {movie.vote_average.toFixed(1)}/10⭐</button>;
               } else if (movie.vote_average > 2.9) {
-                return <button className='metascore bg-orange-600 text-white font-bold py-1 px-4 rounded w-30'><b>Rating:</b> {movie.vote_average}/10⭐</button>;
+                return <button className='metascore bg-orange-600 text-white font-bold py-1 px-4 rounded w-30'><b>Rating:</b> {movie.vote_average.toFixed(1)}/10⭐</button>;
               } else {
-                return <button className='metascore bg-red-600 text-white font-bold py-1 px-4 rounded w-30'><b>Rating:</b> {movie.vote_average}/10⭐</button>;
+                return <button className='metascore bg-red-600 text-white font-bold py-1 px-4 rounded w-30'><b>Rating:</b> {movie.vote_average.toFixed(1)}/10⭐</button>;
               }
           }).call(this)
         }
