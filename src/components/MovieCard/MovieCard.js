@@ -25,7 +25,7 @@ function MovieCard({poster, title, releaseDate, duration, maturity, genres, dire
         <p><b>Géneros:</b> {genres.join(', ')}</p>
         <p><b>Director:</b> {director}</p>
         <p><b>Actores Principales:</b> {mainActors.join(', ')}</p>
-        <p><b>Trama:</b> {plot}</p>
+        <p><b>Trama:</b> {plot.slice(0,200)}</p>
         <p><b>Calificación:</b> {rating}/10⭐</p>
       </div>
     </div>
