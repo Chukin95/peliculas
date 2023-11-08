@@ -23,8 +23,8 @@ const Card = ({ movie }) => {
       <div className="p-4">
         <h2 className="mb-3 text-xl text-blue-600 font-semibold">{movie.title}</h2>
         <hr className='mb-2'/>
-        <p className="text-white text-sm">Estreno: {movie.release_date}</p>
-        <p className="text-white text-sm">Sinapsis: {movie.overview.slice(0, 200)+'...'}</p>
+        <p className="text-white text-sm"><b>Estreno:</b> {movie.release_date}</p>
+        <p className="text-white text-sm"><b>Sinapsis:</b> {movie.overview.slice(0, 200)+'...'}</p>
       </div>
     </div>
   );

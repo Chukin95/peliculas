@@ -8,12 +8,11 @@ function SearchForm() {
   const [searchValue, setSearchValue] = useState('');
 
   useEffect(() => {
-    // Realiza una solicitud a la API de TMDb aquí (similar al paso anterior)
     axios
       .get('https://api.themoviedb.org/3/search/movie', {
         params: {
           api_key: '4292278a6986e2bb799d30006b16698d',
-          language: 'es-ES', // Cambia al idioma que prefieras
+          language: 'es-ES',
           query: `${searchValue}`,
           page: 1,
         },
@@ -29,26 +28,17 @@ function SearchForm() {
   return (
     <div>
         <div className="relative flex flex-column flex-wrap content-center justify-center items-center">
-            {/* <input type="search"
+          <div className="search-bar">
+            <input
             id="default-search"
             value={searchValue}
             onChange={(event) => {setSearchValue(event.target.value)}}
-            className="block w-96 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Buscar películas..."
-            /> */}
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous"/>
-
-            <div className="search-bar">
-              <input
-              id="default-search"
-              value={searchValue}
-              onChange={(event) => {setSearchValue(event.target.value)}}
-              className="w-96"
-              pattern=".*\S.*"
-              required/>
-              <button className="search-btn" type="submit">
-              </button>
-            </div>
+            className="w-96"
+            pattern=".*\S.*"
+            required/>
+            <button className="search-btn" type="submit">
+            </button>
+          </div>
         </div>
         <SearchList searchMovies={searchMovies}/>
     </div>

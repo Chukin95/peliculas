@@ -7,12 +7,11 @@ const Movie = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    // Realiza una solicitud a la API de TMDb aquí (similar al paso anterior)
     axios
       .get('https://api.themoviedb.org/3/discover/movie', {
         params: {
           api_key: '4292278a6986e2bb799d30006b16698d',
-          language: 'es-ES', // Cambia al idioma que prefieras
+          language: 'es-ES',
           sort_by: 'popularity.desc',
           page: 1,
         },
