@@ -14,11 +14,11 @@ function App() {
         <LoginForm/>
       </div>
       <div className="flex flex-col flex-wrap content-center">
-        <h1 className="my-10 text-3xl font-semibold text-center">Busqueda en API</h1>
+        <h1 className="my-10 text-3xl font-semibold text-center">Búsqueda en API</h1>
         <SearchFromAPI className="w-96 max-w-xs"/>
       </div>
       <div>
-        <h1 className="my-10 text-3xl font-semibold text-center">TOP Peliculas - API</h1>
+        <h1 className="my-10 text-3xl font-semibold text-center">TOP Películas - API</h1>
         <MoviesListFromAPI/>
       </div>
       <div className='movies-container'>
