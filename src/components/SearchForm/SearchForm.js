@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import React, { useEffect, useState } from "react";
 import SearchList from './SearchList';
 
 function SearchForm() {
@@ -27,14 +27,15 @@ function SearchForm() {
 
   return (
     <div>
-        <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-        name="search"
-        value={searchValue}
-        onChange={(event) => {setSearchValue(event.target.value)}}
-        type="text"
-        placeholder={searchValue}
-        />
-        <p>Estas buscando: {searchValue}</p>
+        <div className="relative flex flex-column flex-wrap content-center justify-center items-center">
+            <input type="search"
+            id="default-search"
+            value={searchValue}
+            onChange={(event) => {setSearchValue(event.target.value)}}
+            className="block w-96 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Buscar películas..."
+            />
+        </div>
         <SearchList searchMovies={searchMovies}/>
     </div>
   );
