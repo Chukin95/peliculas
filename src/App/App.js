@@ -1,7 +1,7 @@
 import MoviesListFromJSON from '../components/MovieList/MovieList';
 import MoviesListFromAPI from '../components/MoviesAPI/Movie';
 import SearchFromAPI from '../components/SearchForm/SearchForm';
-import peliculas from '../json/MOVIES_DATA.json';
+import peliculas from '../data/MOVIES_DATA.json';
 import '../styles/App.css';
 import '../styles/MovieCard.css';
 
